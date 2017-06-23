@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:sec="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-4.0.xsd     
+  http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+    
+
+    <mvc:annotation-driven />
+    <context:component-scan base-package="com.mycompany.testspring.TestSpring" />
+       <!--<bean id="springSecurityFilterChain" class="org.springframework.web.filter.DelegatingFilterProxy"/>-->
+
+<!--    <bean
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/htmlpages/</value>
+        </property>
+        <property name="suffix">
+            <value>.html</value>
+        </property>
+    </bean> -->
+<!--    <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+  <property name="prefix" value="/htmlpages/"/>
+  <property name="suffix" value=".html"/>
+  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+</bean>-->
+<!--<mvc:resources mapping="/htmlpages/studentpage.html" location="/htmlpages/" />-->
+<!--<mvc:resources mapping="/htmlpages/**" location="/htmlpages/" />-->
+
+
+    <bean id="handlerMapping"
+          class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <property name="order" value="1" />
+    </bean>
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
+<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+<!--  
+    <bean id="multipartResolver"
+           class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+         max upload size in bytes 
+        <property name="maxUploadSize" value="20971520" />  20MB 
+         
+         max size of file in memory (in bytes) 
+        <property name="maxInMemorySize" value="1048576" />  1MB 
+ 
+    </bean>-->
+   
+
+
+    <!--        <property name="prefix">
+13
+        <value>/WEB-INF/</value>
+14
+    </property>
+15
+    <property name="suffix">
+16
+        <value>.jsp</value>
+17
+    </property>-->
+
+    
+
+  
+    <!--    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+    <bean id="handlerMapping"
+          class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <property name="order" value="1" />
+    </bean>
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>-->
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+    <!--    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">indexController</prop>
+            </props>
+        </property>
+    </bean>-->
+
+    <!--    <bean id="viewResolver"
+    class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+    p:prefix="/WEB-INF/jsp/"
+    p:suffix=".jsp" />-->
+
+    <!--
+    The index controller.
+    -->
+    <!--    <bean name="indexController"
+    class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+    p:viewName="index" />-->
+
+</beans>
