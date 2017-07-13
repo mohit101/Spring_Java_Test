@@ -123,6 +123,10 @@ class DNSLooseCoupling
 }
 //Tight Coupling creates some difficulties.
 
-//Here, OrderTotal() methods is give us complete amount for the current items of the carts. If we want to add the discount features in this cart system. It is very hard to do in above code because we have to make changes at every class as it is very tightly coupled.
+//Here, OrderTotal() methods is give us complete amount for the current
+//items of the carts. If we want to add the discount features in this cart system.
+//It is very hard to do in above code because we have to make changes at every class as it is 
+//very tightly coupled.
+
 
 }

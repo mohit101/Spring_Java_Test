@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 //In Interface while implimented, that implimented class must overide all the method that declear in interface
-//If you are extend abstract class then you also have to override all the method but you can also not need to override all the method using abstract keyword in subclass but then this subclass cant be initilaze this is also possible in implimented class as well with same restrictionF 
+//If you are extend abstract class then you also have to override all the method 
+//but you can also not need to override all the method using abstract keyword 
+//in subclass but then this subclass cant be initilaze this is also possible in implimented class as well with same restrictionF 
+
 //Abstract class method cant have body as similer inferface
 //implicitly interface  work as a abstract class
 //Abstract can have public,private and protected method but interface can only public and default

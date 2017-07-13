@@ -37,8 +37,8 @@ public class TestCollection {
 //        convertArraytoList();
 //        replaceElemnentFromList();
 //        setUse();
-        hasgMapUse();
-//        ListUse();
+//        hasgMapUse();
+        ListUse();
 
     }
 
@@ -60,13 +60,19 @@ public class TestCollection {
 
     public static void ListUse() {
         List<String> names = new ArrayList<String>();
+        List<String> names1 = new ArrayList<String>();
+        names1.add("10");
+        names1.add("20");
+        System.out.println(""+names1);
+        for(int i=0; i<10; i++){
         names.add("Tom");
         names.add("Marry");
         names.add("Marry");
         names.add("Marry");
-        names.add("Darry");
+        names.add("Darry");}
         names.add("");
         names.add("");
+        System.out.println("" + names.indexOf("Marry"));
         System.out.println("" + names.size());
         Iterator<String> it = names.iterator();
         while (it.hasNext()) {
@@ -102,7 +108,7 @@ public class TestCollection {
         hashmap.put("sohit", "60%");
         hashmap.put("rohit", "40%");
         hashmap.put("pohit", "40%");
-        hashmap.put("pohit", "");
+        hashmap.put("pohit", "1");
 
         for (Map.Entry<String, String> entry : hashmap.entrySet()) {
             System.out.println("" + entry.getKey() + "" + entry.getValue());

@@ -24,11 +24,18 @@ public class TestStringImmutable {
         String s3 = new String("Mohit");
         String newstr = s3.concat("Mangal");
         System.out.println("" + s1);
+        System.out.println("" + s3);
         System.out.println("" + newstr);
         System.out.println("" + s3 == s1);
         System.out.println("" + s1 == s2);
         Employee employee = new Employee("mohit", "8791");
         System.out.println("" + employee);
+
+        String a = "HelloBrother How are you!";
+        System.out.println("" + a.length()+ "  "+a);
+        String replacedString = a.replace("o", "");
+
+        System.out.println("" + replacedString.length()+" " +replacedString);
     }
 
     ///If we print any Class member though object and custrutor it giving us unreadblr answare

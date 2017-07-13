@@ -16,7 +16,7 @@ public class SortArrayusingoneloop {
         int[] arr = new int[]{10, 2, 20, 4, 0, 40, 38, 34};
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] < arr[i - 1]) {
-//                System.out.println("" + i);
+                System.out.println("" + i);
                 int temp = arr[i];
                 arr[i] = arr[i - 1];
                 arr[i - 1] = temp;
